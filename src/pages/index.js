@@ -10,8 +10,85 @@ import { OverviewTasksProgress } from 'src/sections/overview/overview-tasks-prog
 import { OverviewTotalCustomers } from 'src/sections/overview/overview-total-customers';
 import { OverviewTotalProfit } from 'src/sections/overview/overview-total-profit';
 import { OverviewTraffic } from 'src/sections/overview/overview-traffic';
+import { CompanyCard } from 'src/sections/companies/company-card';
+
 
 const now = new Date();
+
+const companies = [
+  {
+    id: '2569ce0d517a7f06d3ea1f24',
+    createdAt: '27/03/2019',
+    description: 'Entertainment',
+    logo: '/assets/logos/Netflix.png',
+    title: 'Netflix',
+    downloads: '594'
+  },
+  {
+    id: 'ed2b900870ceba72d203ec15',
+    createdAt: '31/03/2019',
+    description: 'Entertainment',
+    logo: '/assets/logos/Hulu.png',
+    title: 'Hulu',
+    downloads: '625'
+  },
+  {
+    id: 'a033e38768c82fca90df3db7',
+    createdAt: '03/04/2019',
+    description: 'Entertainment',
+    logo: '/assets/logos/ParamountPlus.png',
+    title: 'Paramount+',
+    downloads: '857'
+  },
+  {
+    id: '1efecb2bf6a51def9869ab0f',
+    createdAt: '04/04/2019',
+    description: 'Music',
+    logo: '/assets/logos/Music/AppleMusic.png',
+    title: 'Apple Music',
+    downloads: '406'
+  },
+  {
+    id: '1ed68149f65fbc6089b5fd07',
+    createdAt: '04/04/2019',
+    description: 'Music',
+    logo: '/assets/logos/Music/Spotify.png',
+    title: 'Spotify',
+    downloads: '835'
+  },
+  {
+    id: '5dab321376eff6177407e887',
+    createdAt: '04/04/2019',
+    description: 'Music',
+    logo: '/assets/logos/Music/YoutubeMusic.png',
+    title: 'Youtube Music',
+    downloads: '835'
+  },
+  {
+    id: '1efecb2bf6a51def9869ab0f',
+    createdAt: '04/04/2019',
+    description: 'Health & Fitness',
+    logo: '/assets/logos/Health/LaFitness.png',
+    title: 'LaFitness',
+    downloads: '406'
+  },
+  {
+    id: '1ed68149f65fbc6089b5fd07',
+    createdAt: '04/04/2019',
+    description: 'Health & Fitness',
+    logo: '/assets/logos/Health/YMCA.png',
+    title: 'YMCA',
+    downloads: '835'
+  },
+  {
+    id: '5dab321376eff6177407e887',
+    createdAt: '04/04/2019',
+    description: 'Health & Fitness',
+    logo: '/assets/logos/Health/HelloFresh.png',
+    title: 'Hello Fresh',
+    downloads: '835'
+  }
+];
 
 const Page = () => (
   <>
@@ -41,7 +118,7 @@ const Page = () => (
               difference={12}
               positive
               sx={{ height: '100%' }}
-              value="$24k"
+              value="10,000 Credits"
             />
           </Grid>
           <Grid
@@ -51,19 +128,9 @@ const Page = () => (
           >
             <OverviewTotalCustomers
               difference={16}
-              positive={false}
+              positive
               sx={{ height: '100%' }}
-              value="1.6k"
-            />
-          </Grid>
-          <Grid
-            xs={12}
-            sm={6}
-            lg={3}
-          >
-            <OverviewTasksProgress
-              sx={{ height: '100%' }}
-              value={75.5}
+              value="58 Services"
             />
           </Grid>
           <Grid
@@ -77,33 +144,19 @@ const Page = () => (
             />
           </Grid>
           <Grid
-            xs={12}
-            lg={8}
+            container
+            spacing={3}
           >
-            <OverviewSales
-              chartSeries={[
-                {
-                  name: 'This year',
-                  data: [18, 16, 5, 8, 3, 14, 14, 16, 17, 19, 18, 20]
-                },
-                {
-                  name: 'Last year',
-                  data: [12, 11, 4, 6, 2, 9, 9, 10, 11, 12, 13, 13]
-                }
-              ]}
-              sx={{ height: '100%' }}
-            />
-          </Grid>
-          <Grid
-            xs={12}
-            md={6}
-            lg={4}
-          >
-            <OverviewTraffic
-              chartSeries={[63, 15, 22]}
-              labels={['Desktop', 'Tablet', 'Phone']}
-              sx={{ height: '100%' }}
-            />
+            {companies.map((company) => (
+              <Grid
+                xs={12}
+                md={6}
+                lg={4}
+                key={company.id}
+              >
+                <CompanyCard company={company} />
+              </Grid>
+            ))}
           </Grid>
           <Grid
             xs={12}
@@ -114,32 +167,32 @@ const Page = () => (
               products={[
                 {
                   id: '5ece2c077e39da27658aa8a9',
-                  image: '/assets/products/product-1.png',
-                  name: 'Healthcare Erbology',
+                  image: '/assets/logos/Netflix.png',
+                  name: 'Netflix',
                   updatedAt: subHours(now, 6).getTime()
                 },
                 {
                   id: '5ece2c0d16f70bff2cf86cd8',
-                  image: '/assets/products/product-2.png',
-                  name: 'Makeup Lancome Rouge',
+                  image: '/assets/logos/Hulu.png',
+                  name: 'Hulu',
                   updatedAt: subDays(subHours(now, 8), 2).getTime()
                 },
                 {
                   id: 'b393ce1b09c1254c3a92c827',
-                  image: '/assets/products/product-5.png',
-                  name: 'Skincare Soja CO',
+                  image: '/assets/logos/ParamountPlus.png',
+                  name: 'Paramount+',
                   updatedAt: subDays(subHours(now, 1), 1).getTime()
                 },
                 {
                   id: 'a6ede15670da63f49f752c89',
-                  image: '/assets/products/product-6.png',
-                  name: 'Makeup Lipstick',
+                  image: '/assets/logos/DisneyPlus.png',
+                  name: 'Disney+',
                   updatedAt: subDays(subHours(now, 3), 3).getTime()
                 },
                 {
                   id: 'bcad5524fe3a2f8f8620ceda',
-                  image: '/assets/products/product-7.png',
-                  name: 'Healthcare Ritual',
+                  image: '/assets/logos/ESPN.png',
+                  name: 'ESPN',
                   updatedAt: subDays(subHours(now, 5), 6).getTime()
                 }
               ]}
@@ -214,6 +267,35 @@ const Page = () => (
                   status: 'delivered'
                 }
               ]}
+              sx={{ height: '100%' }}
+            />
+          </Grid>
+          <Grid
+            xs={12}
+            lg={8}
+          >
+            <OverviewSales
+              chartSeries={[
+                {
+                  name: 'This year',
+                  data: [18, 16, 5, 8, 3, 14, 14, 16, 17, 19, 18, 20]
+                },
+                {
+                  name: 'Last year',
+                  data: [12, 11, 4, 6, 2, 9, 9, 10, 11, 12, 13, 13]
+                }
+              ]}
+              sx={{ height: '100%' }}
+            />
+          </Grid>
+          <Grid
+            xs={12}
+            md={6}
+            lg={4}
+          >
+            <OverviewTraffic
+              chartSeries={[63, 15, 22]}
+              labels={['Entertainment', 'Music', 'Health']}
               sx={{ height: '100%' }}
             />
           </Grid>

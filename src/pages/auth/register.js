@@ -128,6 +128,17 @@ const Page = () => {
                   type="password"
                   value={formik.values.password}
                 />
+                <TextField
+                  error={!!(formik.touched.password && formik.errors.password)}
+                  fullWidth
+                  helperText={formik.touched.password && formik.errors.password}
+                  label="EUC Registration Code"
+                  name="registrationCode"
+                  onBlur={formik.handleBlur}
+                  onChange={formik.handleChange}
+                  type="text"
+                  value={formik.values.password}
+                />
               </Stack>
               {formik.errors.submit && (
                 <Typography

@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
-import ComputerDesktopIcon from '@heroicons/react/24/solid/ComputerDesktopIcon';
-import DeviceTabletIcon from '@heroicons/react/24/solid/DeviceTabletIcon';
-import PhoneIcon from '@heroicons/react/24/solid/PhoneIcon';
+import MusicIcon from '@heroicons/react/24/outline/MusicalNoteIcon';
+import FilmIcon from '@heroicons/react/24/outline/FilmIcon';
+import HealthIcon from '@heroicons/react/24/outline/FireIcon';
+
 import {
   Box,
   Card,
@@ -63,19 +64,19 @@ const useChartOptions = (labels) => {
 };
 
 const iconMap = {
-  Desktop: (
+  Entertainment: (
     <SvgIcon>
-      <ComputerDesktopIcon />
+      <FilmIcon />
     </SvgIcon>
   ),
-  Tablet: (
+  Music: (
     <SvgIcon>
-      <DeviceTabletIcon />
+      <MusicIcon />
     </SvgIcon>
   ),
-  Phone: (
+  Health: (
     <SvgIcon>
-      <PhoneIcon />
+      <HealthIcon />
     </SvgIcon>
   )
 };
@@ -86,7 +87,7 @@ export const OverviewTraffic = (props) => {
 
   return (
     <Card sx={sx}>
-      <CardHeader title="Traffic Source" />
+      <CardHeader title="Category Utilization" />
       <CardContent>
         <Chart
           height={300}
