@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import ArrowDownOnSquareIcon from '@heroicons/react/24/solid/ArrowDownOnSquareIcon';
 import ClockIcon from '@heroicons/react/24/solid/ClockIcon';
-import { Avatar, Box, Card, CardContent, Divider, Stack, SvgIcon, Typography } from '@mui/material';
+import { Avatar, Box, Card, CardContent, Divider, Stack, SvgIcon, Typography, Button } from '@mui/material';
 
 export const CompanyCard = (props) => {
   const { company } = props;
@@ -39,6 +39,30 @@ export const CompanyCard = (props) => {
           variant="body1"
         >
           {company.description}
+        </Typography>
+        <Typography>
+        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+      <div style={{ flexDirection: 'column', alignItems: 'center' }}>
+      <Typography>
+      <span style={{ color: 'transparent' }}>Invisible Text</span>
+        </Typography>
+        <Typography>
+          <Button variant="contained">
+            {company.monthlyAmount} Month
+          </Button>
+        </Typography>
+      </div>
+      <div style={{ flexDirection: 'column', alignItems: 'center' }}>
+        <Typography align='center'>
+        <del>{company.originalAnnualAmount} Year</del>
+        </Typography>
+        <Typography>
+          <Button variant="contained">
+            {company.discountedAnnualAmount} Year
+          </Button>
+        </Typography>
+      </div>
+    </div>
         </Typography>
       </CardContent>
       <Box sx={{ flexGrow: 1 }} />

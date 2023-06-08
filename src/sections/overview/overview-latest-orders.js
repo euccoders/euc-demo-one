@@ -29,7 +29,7 @@ export const OverviewLatestOrders = (props) => {
 
   return (
     <Card sx={sx}>
-      <CardHeader title="Latest Orders" />
+      <CardHeader title="Current Services" />
       <Scrollbar sx={{ flexGrow: 1 }}>
         <Box sx={{ minWidth: 800 }}>
           <Table>
@@ -39,7 +39,10 @@ export const OverviewLatestOrders = (props) => {
                   Order
                 </TableCell>
                 <TableCell>
-                  Customer
+                  Service
+                </TableCell>
+                <TableCell>
+                  Category
                 </TableCell>
                 <TableCell sortDirection="desc">
                   Date
@@ -62,7 +65,10 @@ export const OverviewLatestOrders = (props) => {
                       {order.ref}
                     </TableCell>
                     <TableCell>
-                      {order.customer.name}
+                      {order.customer.service}
+                    </TableCell>
+                    <TableCell>
+                      {order.customer.category}
                     </TableCell>
                     <TableCell>
                       {createdAt}
