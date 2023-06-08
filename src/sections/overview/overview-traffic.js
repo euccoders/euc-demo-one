@@ -74,7 +74,7 @@ const iconMap = {
       <MusicIcon />
     </SvgIcon>
   ),
-  Health: (
+  Wellness: (
     <SvgIcon>
       <HealthIcon />
     </SvgIcon>

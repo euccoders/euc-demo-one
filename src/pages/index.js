@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { subDays, subHours } from 'date-fns';
-import { Box, Container, Unstable_Grid2 as Grid } from '@mui/material';
+import { Box, Container, Unstable_Grid2 as Grid, Typography } from '@mui/material';
 import { Layout as DashboardLayout } from 'src/layouts/dashboard/layout';
 import { OverviewBudget } from 'src/sections/overview/overview-budget';
 import { OverviewLatestOrders } from 'src/sections/overview/overview-latest-orders';
@@ -10,19 +10,22 @@ import { OverviewTasksProgress } from 'src/sections/overview/overview-tasks-prog
 import { OverviewTotalCustomers } from 'src/sections/overview/overview-total-customers';
 import { OverviewTotalProfit } from 'src/sections/overview/overview-total-profit';
 import { OverviewTraffic } from 'src/sections/overview/overview-traffic';
-import { CompanyCard } from 'src/sections/companies/company-card';
+import { CompanyCardList } from 'src/sections/companies/company-card-list';
 
 
 const now = new Date();
 
-const companies = [
+const companiesEntertainment = [
   {
     id: '2569ce0d517a7f06d3ea1f24',
     createdAt: '27/03/2019',
     description: 'Entertainment',
     logo: '/assets/logos/Netflix.png',
     title: 'Netflix',
-    downloads: '594'
+    downloads: '594',
+    monthlyAmount: '$9.99',
+    originalAnnualAmount: '$119.99',
+    discountedAnnualAmount: '$99.99'
   },
   {
     id: 'ed2b900870ceba72d203ec15',
@@ -30,7 +33,10 @@ const companies = [
     description: 'Entertainment',
     logo: '/assets/logos/Hulu.png',
     title: 'Hulu',
-    downloads: '625'
+    downloads: '625',
+    monthlyAmount: '$10.83',
+    originalAnnualAmount: '$129.99',
+    discountedAnnualAmount: '$79.99'
   },
   {
     id: 'a033e38768c82fca90df3db7',
@@ -38,15 +44,46 @@ const companies = [
     description: 'Entertainment',
     logo: '/assets/logos/ParamountPlus.png',
     title: 'Paramount+',
-    downloads: '857'
+    downloads: '857',
+    monthlyAmount: '$11.67',
+    originalAnnualAmount: '$139.99',
+    discountedAnnualAmount: '$89.99'
   },
+  {
+    id: 'a033e38768c82fca90df3db7',
+    createdAt: '03/04/2019',
+    description: 'Entertainment',
+    logo: '/assets/logos/ESPN.png',
+    title: 'ESPN',
+    downloads: '857',
+    monthlyAmount: '$9.17',
+    originalAnnualAmount: '$109.99',
+    discountedAnnualAmount: '$69.99'
+  },
+  {
+    id: 'a033e38768c82fca90df3db7',
+    createdAt: '03/04/2019',
+    description: 'Entertainment',
+    logo: '/assets/logos/DisneyPlus.png',
+    title: 'Disney+',
+    downloads: '857',
+    monthlyAmount: '$8.33',
+    originalAnnualAmount: '$99.99',
+    discountedAnnualAmount: '$59.99'
+  }
+];
+
+const companiesMusic = [
   {
     id: '1efecb2bf6a51def9869ab0f',
     createdAt: '04/04/2019',
     description: 'Music',
     logo: '/assets/logos/Music/AppleMusic.png',
     title: 'Apple Music',
-    downloads: '406'
+    downloads: '406',
+    originalAnnualAmount: '$129.99',
+    discountedAnnualAmount: '$99.99',
+    monthlyAmount: '$10.83'
   },
   {
     id: '1ed68149f65fbc6089b5fd07',
@@ -54,7 +91,10 @@ const companies = [
     description: 'Music',
     logo: '/assets/logos/Music/Spotify.png',
     title: 'Spotify',
-    downloads: '835'
+    downloads: '835',
+    originalAnnualAmount: '$99.00',
+    discountedAnnualAmount: '$79.99',
+    monthlyAmount: '$8.25'
   },
   {
     id: '5dab321376eff6177407e887',
@@ -62,31 +102,134 @@ const companies = [
     description: 'Music',
     logo: '/assets/logos/Music/YoutubeMusic.png',
     title: 'Youtube Music',
-    downloads: '835'
-  },
-  {
-    id: '1efecb2bf6a51def9869ab0f',
-    createdAt: '04/04/2019',
-    description: 'Health & Fitness',
-    logo: '/assets/logos/Health/LaFitness.png',
-    title: 'LaFitness',
-    downloads: '406'
-  },
-  {
-    id: '1ed68149f65fbc6089b5fd07',
-    createdAt: '04/04/2019',
-    description: 'Health & Fitness',
-    logo: '/assets/logos/Health/YMCA.png',
-    title: 'YMCA',
-    downloads: '835'
+    downloads: '835',
+    originalAnnualAmount: '$149.99',
+    discountedAnnualAmount: '$119.99',
+    monthlyAmount: '$12.50'
   },
   {
     id: '5dab321376eff6177407e887',
     createdAt: '04/04/2019',
-    description: 'Health & Fitness',
+    description: 'Music',
+    logo: '/assets/logos/Music/GooglePlayMusic.png',
+    title: 'Google Play Music',
+    downloads: '835',
+    originalAnnualAmount: '$109.99',
+    discountedAnnualAmount: '$89.99',
+    monthlyAmount: '$9.17'
+  },
+  {
+    id: '5dab321376eff6177407e887',
+    createdAt: '04/04/2019',
+    description: 'Music',
+    logo: '/assets/logos/Music/Pandora.png',
+    title: 'Pandora',
+    downloads: '835',
+    originalAnnualAmount: '$79.99',
+    discountedAnnualAmount: '$69.99',
+    monthlyAmount: '$6.67'
+  },
+  {
+    id: '5dab321376eff6177407e887',
+    createdAt: '04/04/2019',
+    description: 'Music',
+    logo: '/assets/logos/Music/SoundCloud.png',
+    title: 'Sound Cloud',
+    downloads: '835',
+    originalAnnualAmount: '$89.99',
+    discountedAnnualAmount: '$79.99',
+    monthlyAmount: '$7.50'
+  }
+];
+
+const companiesHealth = [
+  {
+    id: '1efecb2bf6a51def9869ab0f',
+    createdAt: '04/04/2019',
+    description: 'Health & Wellness',
+    logo: '/assets/logos/Health/LaFitness.png',
+    title: 'LaFitness',
+    downloads: '406',
+    originalAnnualAmount: '$139.99',
+    discountedAnnualAmount: '$109.99',
+    monthlyAmount: '$11.67'
+  },
+  {
+    id: '1ed68149f65fbc6089b5fd07',
+    createdAt: '04/04/2019',
+    description: 'Health & Wellness',
+    logo: '/assets/logos/Health/YMCA.png',
+    title: 'YMCA',
+    downloads: '835',
+    originalAnnualAmount: '$99.00',
+    discountedAnnualAmount: '$79.99',
+    monthlyAmount: '$8.25'
+  },
+  {
+    id: '5dab321376eff6177407e887',
+    createdAt: '04/04/2019',
+    description: 'Health & Wellness',
     logo: '/assets/logos/Health/HelloFresh.png',
     title: 'Hello Fresh',
-    downloads: '835'
+    downloads: '835',
+    originalAnnualAmount: '$149.99',
+    discountedAnnualAmount: '$119.99',
+    monthlyAmount: '$12.50'
+  },
+  {
+    id: '1ed68149f65fbc6089b5fd07',
+    createdAt: '04/04/2019',
+    description: 'Health & Wellness',
+    logo: '/assets/logos/Health/DoorDash.png',
+    title: 'Door Dash',
+    downloads: '835',
+    originalAnnualAmount: '$129.99',
+    discountedAnnualAmount: '$99.99',
+    monthlyAmount: '$10.83'
+  },
+  {
+    id: '1ed68149f65fbc6089b5fd07',
+    createdAt: '04/04/2019',
+    description: 'Health & Wellness',
+    logo: '/assets/logos/Health/GNC.png',
+    title: 'GNC',
+    downloads: '835',
+    originalAnnualAmount: '$79.99',
+    discountedAnnualAmount: '$69.99',
+    monthlyAmount: '$6.67'
+  },
+  {
+    id: '1ed68149f65fbc6089b5fd07',
+    createdAt: '04/04/2019',
+    description: 'Health & Wellness',
+    logo: '/assets/logos/Health/Instacart.png',
+    title: 'Instacart',
+    downloads: '835',
+    originalAnnualAmount: '$89.99',
+    discountedAnnualAmount: '$79.99',
+    monthlyAmount: '$7.50'
+  },
+  {
+    id: '1ed68149f65fbc6089b5fd07',
+    createdAt: '04/04/2019',
+    description: 'Health & Wellness',
+    logo: '/assets/logos/Health/MyFitnessPal.png',
+    title: 'MyFitnessPal',
+    downloads: '835',
+    originalAnnualAmount: '$109.99',
+    discountedAnnualAmount: '$89.99',
+    monthlyAmount: '$9.17'
+  },
+  {
+    id: '1ed68149f65fbc6089b5fd07',
+    createdAt: '04/04/2019',
+    description: 'Health & Wellness',
+    logo: '/assets/logos/Health/Peloton.png',
+    title: 'Peloton',
+    downloads: '835',
+    originalAnnualAmount: '$119.99',
+    discountedAnnualAmount: '$99.99',
+    monthlyAmount: '$10.00'
   }
 ];
 
@@ -94,7 +237,7 @@ const Page = () => (
   <>
     <Head>
       <title>
-        Overview | Devias Kit
+        Overview | EUC
       </title>
     </Head>
     <Box
@@ -113,6 +256,7 @@ const Page = () => (
             xs={12}
             sm={6}
             lg={3}
+            paddingBottom={7}
           >
             <OverviewBudget
               difference={12}
@@ -125,6 +269,7 @@ const Page = () => (
             xs={12}
             sm={6}
             lg={3}
+            paddingBottom={7}
           >
             <OverviewTotalCustomers
               difference={16}
@@ -137,8 +282,12 @@ const Page = () => (
             xs={12}
             sm={6}
             lg={3}
+            paddingBottom={7}
+
           >
             <OverviewTotalProfit
+              difference={8}
+              positive
               sx={{ height: '100%' }}
               value="$15k"
             />
@@ -146,17 +295,35 @@ const Page = () => (
           <Grid
             container
             spacing={3}
+            paddingBottom={7}
           >
-            {companies.map((company) => (
-              <Grid
-                xs={12}
-                md={6}
-                lg={4}
-                key={company.id}
-              >
-                <CompanyCard company={company} />
-              </Grid>
-            ))}
+          <Typography variant="h4">
+                  Entertainment
+                </Typography>
+                <CompanyCardList companies={companiesEntertainment} />
+
+          </Grid>
+          <Grid
+            container
+            spacing={3}
+            paddingBottom={7}
+          >
+          <Typography variant="h4">
+                  Music
+                </Typography>
+                <CompanyCardList companies={companiesMusic} />
+
+          </Grid>
+          <Grid
+            container
+            spacing={3}
+            paddingBottom={7}
+          >
+          <Typography variant="h4">
+                  Health & Wellness
+                </Typography>
+                <CompanyCardList companies={companiesHealth} />
+
           </Grid>
           <Grid
             xs={12}
@@ -208,63 +375,69 @@ const Page = () => (
               orders={[
                 {
                   id: 'f69f88012978187a6c12897f',
-                  ref: 'DEV1049',
+                  ref: 'ORD1049',
                   amount: 30.5,
                   customer: {
-                    name: 'Ekaterina Tankova'
+                    service: 'Netflix',
+                    category: 'Entertainment'
                   },
                   createdAt: 1555016400000,
                   status: 'pending'
                 },
                 {
                   id: '9eaa1c7dd4433f413c308ce2',
-                  ref: 'DEV1048',
+                  ref: 'ORD1048',
                   amount: 25.1,
                   customer: {
-                    name: 'Cao Yu'
+                    service: 'Hulu',
+                    category: 'Entertainment'
                   },
                   createdAt: 1555016400000,
-                  status: 'delivered'
+                  status: 'active'
                 },
                 {
                   id: '01a5230c811bd04996ce7c13',
-                  ref: 'DEV1047',
+                  ref: 'ORD1047',
                   amount: 10.99,
                   customer: {
-                    name: 'Alexa Richardson'
+                    service: 'Paramount+',
+                    category: 'Entertainment'
                   },
                   createdAt: 1554930000000,
-                  status: 'refunded'
+                  status: 'expired'
                 },
                 {
                   id: '1f4e1bd0a87cea23cdb83d18',
-                  ref: 'DEV1046',
+                  ref: 'ORD1046',
                   amount: 96.43,
                   customer: {
-                    name: 'Anje Keizer'
+                    service: 'Apple Music',
+                    category: 'Music'
                   },
                   createdAt: 1554757200000,
                   status: 'pending'
                 },
                 {
                   id: '9f974f239d29ede969367103',
-                  ref: 'DEV1045',
+                  ref: 'ORD1045',
                   amount: 32.54,
                   customer: {
-                    name: 'Clarke Gillebert'
+                    service: 'Spotify',
+                    category: 'Music'
                   },
                   createdAt: 1554670800000,
-                  status: 'delivered'
+                  status: 'active'
                 },
                 {
                   id: 'ffc83c1560ec2f66a1c05596',
-                  ref: 'DEV1044',
+                  ref: 'ORD1044',
                   amount: 16.76,
                   customer: {
-                    name: 'Adam Denisov'
+                    service: 'YMCA',
+                    category: 'Health & Wellness'
                   },
                   createdAt: 1554670800000,
-                  status: 'delivered'
+                  status: 'active'
                 }
               ]}
               sx={{ height: '100%' }}
@@ -277,12 +450,12 @@ const Page = () => (
             <OverviewSales
               chartSeries={[
                 {
-                  name: 'This year',
-                  data: [18, 16, 5, 8, 3, 14, 14, 16, 17, 19, 18, 20]
+                  name: 'Allocated',
+                  data: [300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300]
                 },
                 {
-                  name: 'Last year',
-                  data: [12, 11, 4, 6, 2, 9, 9, 10, 11, 12, 13, 13]
+                  name: 'Spent',
+                  data: [250, 100, 45, 63, 210, 0, 421, 100, 120, 290, 130, 290]
                 }
               ]}
               sx={{ height: '100%' }}
@@ -295,7 +468,7 @@ const Page = () => (
           >
             <OverviewTraffic
               chartSeries={[63, 15, 22]}
-              labels={['Entertainment', 'Music', 'Health']}
+              labels={['Entertainment', 'Music', 'Wellness']}
               sx={{ height: '100%' }}
             />
           </Grid>
