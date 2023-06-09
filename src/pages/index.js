@@ -262,7 +262,7 @@ const Page = () => (
               difference={12}
               positive
               sx={{ height: '100%' }}
-              value="10,000 Credits"
+              value="585 Credits"
             />
           </Grid>
           <Grid
@@ -301,28 +301,6 @@ const Page = () => (
                   Entertainment
                 </Typography>
                 <CompanyCardList companies={companiesEntertainment} />
-
-          </Grid>
-          <Grid
-            container
-            spacing={3}
-            paddingBottom={7}
-          >
-          <Typography variant="h4">
-                  Music
-                </Typography>
-                <CompanyCardList companies={companiesMusic} />
-
-          </Grid>
-          <Grid
-            container
-            spacing={3}
-            paddingBottom={7}
-          >
-          <Typography variant="h4">
-                  Health & Wellness
-                </Typography>
-                <CompanyCardList companies={companiesHealth} />
 
           </Grid>
           <Grid

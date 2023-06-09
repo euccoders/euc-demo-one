@@ -199,7 +199,7 @@ const Page = () => {
     <>
       <Head>
         <title>
-          Customers | EUC
+        Employees | EUC
         </title>
       </Head>
       <Box
@@ -218,7 +218,7 @@ const Page = () => {
             >
               <Stack spacing={1}>
                 <Typography variant="h4">
-                  EUC Customers
+                  EUC Employees
                 </Typography>
                 <Stack
                   alignItems="center"
@@ -233,7 +233,7 @@ const Page = () => {
                       </SvgIcon>
                     )}
                   >
-                    Import Employees
+                    Upload Employees .csv
                   </Button>
                   <Button
                     color="inherit"
@@ -243,7 +243,7 @@ const Page = () => {
                       </SvgIcon>
                     )}
                   >
-                    Export
+                    Download Employees .csv
                   </Button>
                 </Stack>
               </Stack>
