@@ -19,7 +19,7 @@ export const items = [
     )
   },
   {
-    title: 'Employee Upload',
+    title: 'Employees',
     path: '/customers',
     icon: (
       <SvgIcon fontSize="small">

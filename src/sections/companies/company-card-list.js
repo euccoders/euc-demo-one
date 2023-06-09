@@ -12,7 +12,6 @@ export const CompanyCardList = (props) => {
         whiteSpace: 'nowrap',
         display: 'flex',
         flexDirection: 'row',
-        
       }}
     >
       {companies.map((company, index) => (

@@ -262,7 +262,7 @@ const Page = () => (
               difference={12}
               positive
               sx={{ height: '100%' }}
-              value="10,000 Credits"
+              value="585 Credits"
             />
           </Grid>
           <Grid
@@ -275,7 +275,7 @@ const Page = () => (
               difference={16}
               positive
               sx={{ height: '100%' }}
-              value="58 Services"
+              value="8 Services"
             />
           </Grid>
           <Grid
