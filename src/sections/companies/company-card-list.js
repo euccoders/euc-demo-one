@@ -12,9 +12,7 @@ export const CompanyCardList = (props) => {
         whiteSpace: 'nowrap',
         display: 'flex',
         flexDirection: 'row',
-        '&::-webkit-scrollbar': {
-          display: 'none', // Hide the scrollbar
-        },
+        
       }}
     >
       {companies.map((company, index) => (
