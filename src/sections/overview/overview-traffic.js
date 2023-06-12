@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import MusicIcon from '@heroicons/react/24/outline/MusicalNoteIcon';
 import FilmIcon from '@heroicons/react/24/outline/FilmIcon';
 import HealthIcon from '@heroicons/react/24/outline/FireIcon';
+import CreditIcon from '@heroicons/react/24/outline/CurrencyDollarIcon';
 
 import {
   Box,
@@ -25,6 +26,7 @@ const useChartOptions = (labels) => {
     colors: [
       theme.palette.primary.main,
       theme.palette.success.main,
+      theme.palette.info.main,
       theme.palette.warning.main
     ],
     dataLabels: {
@@ -77,6 +79,11 @@ const iconMap = {
   Wellness: (
     <SvgIcon>
       <HealthIcon />
+    </SvgIcon>
+  ),
+  Unused: (
+    <SvgIcon>
+      <CreditIcon />
     </SvgIcon>
   )
 };

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import NextLink from 'next/link';
-import { Box, Typography, Unstable_Grid2 as Grid } from '@mui/material';
+import { Box, Typography, Unstable_Grid2 as Grid, Avatar } from '@mui/material';
 import { Logo } from 'src/components/logo';
 
 // TODO: Change subtitle text
@@ -49,7 +49,14 @@ export const Layout = (props) => {
                 width: 32
               }}
             >
-              <Logo />
+              <Avatar
+              src="/Euc-Logo.png"
+              sx={{
+                display: 'inline-flex',
+                height: 75,
+                width: 75
+              }}
+            />
             </Box>
           </Box>
           {children}

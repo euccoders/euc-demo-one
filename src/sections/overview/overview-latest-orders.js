@@ -20,8 +20,8 @@ import { SeverityPill } from 'src/components/severity-pill';
 
 const statusMap = {
   pending: 'warning',
-  delivered: 'success',
-  refunded: 'error'
+  active: 'success',
+  expired: 'error'
 };
 
 export const OverviewLatestOrders = (props) => {

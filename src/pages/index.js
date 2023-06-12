@@ -23,9 +23,9 @@ const companiesEntertainment = [
     logo: '/assets/logos/Netflix.png',
     title: 'Netflix',
     downloads: '594',
-    monthlyAmount: '$9.99',
-    originalAnnualAmount: '$119.99',
-    discountedAnnualAmount: '$99.99'
+    monthlyAmount: '10 Credits',
+    originalAnnualAmount: '120 Credits',
+    discountedAnnualAmount: '100 Credits'
   },
   {
     id: 'ed2b900870ceba72d203ec15',
@@ -34,9 +34,9 @@ const companiesEntertainment = [
     logo: '/assets/logos/Hulu.png',
     title: 'Hulu',
     downloads: '625',
-    monthlyAmount: '$10.83',
-    originalAnnualAmount: '$129.99',
-    discountedAnnualAmount: '$79.99'
+    monthlyAmount: '11 Credits',
+    originalAnnualAmount: '130 Credits',
+    discountedAnnualAmount: '80 Credits'
   },
   {
     id: 'a033e38768c82fca90df3db7',
@@ -45,9 +45,9 @@ const companiesEntertainment = [
     logo: '/assets/logos/ParamountPlus.png',
     title: 'Paramount+',
     downloads: '857',
-    monthlyAmount: '$11.67',
-    originalAnnualAmount: '$139.99',
-    discountedAnnualAmount: '$89.99'
+    monthlyAmount: '12 Credits',
+    originalAnnualAmount: '140 Credits',
+    discountedAnnualAmount: '90 Credits'
   },
   {
     id: 'a033e38768c82fca90df3db7',
@@ -56,9 +56,9 @@ const companiesEntertainment = [
     logo: '/assets/logos/ESPN.png',
     title: 'ESPN',
     downloads: '857',
-    monthlyAmount: '$9.17',
-    originalAnnualAmount: '$109.99',
-    discountedAnnualAmount: '$69.99'
+    monthlyAmount: '10 Credits',
+    originalAnnualAmount: '110 Credits',
+    discountedAnnualAmount: '70 Credits'
   },
   {
     id: 'a033e38768c82fca90df3db7',
@@ -67,11 +67,12 @@ const companiesEntertainment = [
     logo: '/assets/logos/DisneyPlus.png',
     title: 'Disney+',
     downloads: '857',
-    monthlyAmount: '$8.33',
-    originalAnnualAmount: '$99.99',
-    discountedAnnualAmount: '$59.99'
+    monthlyAmount: '9 Credits',
+    originalAnnualAmount: '100 Credits',
+    discountedAnnualAmount: '60 Credits'
   }
 ];
+
 
 const companiesMusic = [
   {
@@ -81,9 +82,9 @@ const companiesMusic = [
     logo: '/assets/logos/Music/AppleMusic.png',
     title: 'Apple Music',
     downloads: '406',
-    originalAnnualAmount: '$129.99',
-    discountedAnnualAmount: '$99.99',
-    monthlyAmount: '$10.83'
+    originalAnnualAmount: '130 Credits',
+    discountedAnnualAmount: '100 Credits',
+    monthlyAmount: '11 Credits'
   },
   {
     id: '1ed68149f65fbc6089b5fd07',
@@ -92,9 +93,9 @@ const companiesMusic = [
     logo: '/assets/logos/Music/Spotify.png',
     title: 'Spotify',
     downloads: '835',
-    originalAnnualAmount: '$99.00',
-    discountedAnnualAmount: '$79.99',
-    monthlyAmount: '$8.25'
+    originalAnnualAmount: '100 Credits',
+    discountedAnnualAmount: '80 Credits',
+    monthlyAmount: '9 Credits'
   },
   {
     id: '5dab321376eff6177407e887',
@@ -103,9 +104,9 @@ const companiesMusic = [
     logo: '/assets/logos/Music/YoutubeMusic.png',
     title: 'Youtube Music',
     downloads: '835',
-    originalAnnualAmount: '$149.99',
-    discountedAnnualAmount: '$119.99',
-    monthlyAmount: '$12.50'
+    originalAnnualAmount: '150 Credits',
+    discountedAnnualAmount: '120 Credits',
+    monthlyAmount: '13 Credits'
   },
   {
     id: '5dab321376eff6177407e887',
@@ -114,9 +115,9 @@ const companiesMusic = [
     logo: '/assets/logos/Music/GooglePlayMusic.png',
     title: 'Google Play Music',
     downloads: '835',
-    originalAnnualAmount: '$109.99',
-    discountedAnnualAmount: '$89.99',
-    monthlyAmount: '$9.17'
+    originalAnnualAmount: '110 Credits',
+    discountedAnnualAmount: '90 Credits',
+    monthlyAmount: '10 Credits'
   },
   {
     id: '5dab321376eff6177407e887',
@@ -125,9 +126,9 @@ const companiesMusic = [
     logo: '/assets/logos/Music/Pandora.png',
     title: 'Pandora',
     downloads: '835',
-    originalAnnualAmount: '$79.99',
-    discountedAnnualAmount: '$69.99',
-    monthlyAmount: '$6.67'
+    originalAnnualAmount: '80 Credits',
+    discountedAnnualAmount: '70 Credits',
+    monthlyAmount: '7 Credits'
   },
   {
     id: '5dab321376eff6177407e887',
@@ -136,11 +137,12 @@ const companiesMusic = [
     logo: '/assets/logos/Music/SoundCloud.png',
     title: 'Sound Cloud',
     downloads: '835',
-    originalAnnualAmount: '$89.99',
-    discountedAnnualAmount: '$79.99',
-    monthlyAmount: '$7.50'
+    originalAnnualAmount: '90 Credits',
+    discountedAnnualAmount: '80 Credits',
+    monthlyAmount: '8 Credits'
   }
 ];
+
 
 const companiesHealth = [
   {
@@ -150,9 +152,9 @@ const companiesHealth = [
     logo: '/assets/logos/Health/LaFitness.png',
     title: 'LaFitness',
     downloads: '406',
-    originalAnnualAmount: '$139.99',
-    discountedAnnualAmount: '$109.99',
-    monthlyAmount: '$11.67'
+    originalAnnualAmount: '140 Credits',
+    discountedAnnualAmount: '110 Credits',
+    monthlyAmount: '12 Credits'
   },
   {
     id: '1ed68149f65fbc6089b5fd07',
@@ -161,9 +163,9 @@ const companiesHealth = [
     logo: '/assets/logos/Health/YMCA.png',
     title: 'YMCA',
     downloads: '835',
-    originalAnnualAmount: '$99.00',
-    discountedAnnualAmount: '$79.99',
-    monthlyAmount: '$8.25'
+    originalAnnualAmount: '100 Credits',
+    discountedAnnualAmount: '80 Credits',
+    monthlyAmount: '9 Credits'
   },
   {
     id: '5dab321376eff6177407e887',
@@ -172,9 +174,9 @@ const companiesHealth = [
     logo: '/assets/logos/Health/HelloFresh.png',
     title: 'Hello Fresh',
     downloads: '835',
-    originalAnnualAmount: '$149.99',
-    discountedAnnualAmount: '$119.99',
-    monthlyAmount: '$12.50'
+    originalAnnualAmount: '150 Credits',
+    discountedAnnualAmount: '120 Credits',
+    monthlyAmount: '13 Credits'
   },
   {
     id: '1ed68149f65fbc6089b5fd07',
@@ -183,9 +185,9 @@ const companiesHealth = [
     logo: '/assets/logos/Health/DoorDash.png',
     title: 'Door Dash',
     downloads: '835',
-    originalAnnualAmount: '$129.99',
-    discountedAnnualAmount: '$99.99',
-    monthlyAmount: '$10.83'
+    originalAnnualAmount: '130 Credits',
+    discountedAnnualAmount: '100 Credits',
+    monthlyAmount: '11 Credits'
   },
   {
     id: '1ed68149f65fbc6089b5fd07',
@@ -194,9 +196,9 @@ const companiesHealth = [
     logo: '/assets/logos/Health/GNC.png',
     title: 'GNC',
     downloads: '835',
-    originalAnnualAmount: '$79.99',
-    discountedAnnualAmount: '$69.99',
-    monthlyAmount: '$6.67'
+    originalAnnualAmount: '80 Credits',
+    discountedAnnualAmount: '70 Credits',
+    monthlyAmount: '7 Credits'
   },
   {
     id: '1ed68149f65fbc6089b5fd07',
@@ -205,9 +207,9 @@ const companiesHealth = [
     logo: '/assets/logos/Health/Instacart.png',
     title: 'Instacart',
     downloads: '835',
-    originalAnnualAmount: '$89.99',
-    discountedAnnualAmount: '$79.99',
-    monthlyAmount: '$7.50'
+    originalAnnualAmount: '90 Credits',
+    discountedAnnualAmount: '80 Credits',
+    monthlyAmount: '8 Credits'
   },
   {
     id: '1ed68149f65fbc6089b5fd07',
@@ -216,9 +218,9 @@ const companiesHealth = [
     logo: '/assets/logos/Health/MyFitnessPal.png',
     title: 'MyFitnessPal',
     downloads: '835',
-    originalAnnualAmount: '$109.99',
-    discountedAnnualAmount: '$89.99',
-    monthlyAmount: '$9.17'
+    originalAnnualAmount: '110 Credits',
+    discountedAnnualAmount: '90 Credits',
+    monthlyAmount: '10 Credits'
   },
   {
     id: '1ed68149f65fbc6089b5fd07',
@@ -227,9 +229,9 @@ const companiesHealth = [
     logo: '/assets/logos/Health/Peloton.png',
     title: 'Peloton',
     downloads: '835',
-    originalAnnualAmount: '$119.99',
-    discountedAnnualAmount: '$99.99',
-    monthlyAmount: '$10.00'
+    originalAnnualAmount: '120 Credits',
+    discountedAnnualAmount: '100 Credits',
+    monthlyAmount: '10 Credits'
   }
 ];
 
@@ -262,7 +264,7 @@ const Page = () => (
               difference={12}
               positive
               sx={{ height: '100%' }}
-              value="585 Credits"
+              value="585"
             />
           </Grid>
           <Grid
@@ -275,7 +277,7 @@ const Page = () => (
               difference={16}
               positive
               sx={{ height: '100%' }}
-              value="8 Services"
+              value="8"
             />
           </Grid>
           <Grid
@@ -468,8 +470,8 @@ const Page = () => (
             lg={4}
           >
             <OverviewTraffic
-              chartSeries={[63, 15, 22]}
-              labels={['Entertainment', 'Music', 'Wellness']}
+              chartSeries={[53, 15, 22, 10]}
+              labels={['Entertainment', 'Music', 'Wellness', "Unused"]}
               sx={{ height: '100%' }}
             />
           </Grid>

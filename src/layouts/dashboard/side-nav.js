@@ -11,7 +11,8 @@ import {
   Stack,
   SvgIcon,
   Typography,
-  useMediaQuery
+  useMediaQuery,
+  Avatar
 } from '@mui/material';
 import { Logo } from 'src/components/logo';
 import { Scrollbar } from 'src/components/scrollbar';
@@ -52,28 +53,14 @@ export const SideNav = (props) => {
               width: 32
             }}
           >
-            <Logo />
-          </Box>
-          <Box
-            sx={{
-              alignItems: 'center',
-              backgroundColor: 'rgba(255, 255, 255, 0.04)',
-              borderRadius: 1,
-              cursor: 'pointer',
-              display: 'flex',
-              justifyContent: 'space-between',
-              mt: 2,
-              p: '12px'
-            }}
-          >
-            <div>
-              <Typography
-                color="inherit"
-                variant="subtitle1"
-              >
-                EUC
-              </Typography>
-            </div>
+            <Avatar
+              src="/Euc-Logo.png"
+              sx={{
+                display: 'inline-flex',
+                height: 75,
+                width: 75
+              }}
+            />
           </Box>
         </Box>
         <Divider sx={{ borderColor: 'neutral.700' }} />
