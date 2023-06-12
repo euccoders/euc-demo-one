@@ -25,6 +25,7 @@ export const CompanyCard = (props) => {
           <Avatar
             src={company.logo}
             variant="square"
+            sx={{ width: 150, height: 150 }}
           />
         </Box>
         <Typography
@@ -48,17 +49,17 @@ export const CompanyCard = (props) => {
         </Typography>
         <Typography>
           <Button variant="contained">
-            {company.monthlyAmount} Month
+            {company.monthlyAmount} / Month
           </Button>
         </Typography>
       </div>
       <div style={{ flexDirection: 'column', alignItems: 'center' }}>
         <Typography align='center'>
-        <del>{company.originalAnnualAmount} Year</del>
+        <del>{company.originalAnnualAmount} / Year</del>
         </Typography>
         <Typography>
           <Button variant="contained">
-            {company.discountedAnnualAmount} Year
+            {company.discountedAnnualAmount} / Year
           </Button>
         </Typography>
       </div>

@@ -21,10 +21,10 @@ export const OverviewTotalProfit = (props) => {
               color="text.secondary"
               variant="overline"
             >
-              Used Credits
+              Credit Usage
             </Typography>
             <Typography variant="h4">
-              33% of Credits
+              33%
             </Typography>
           </Stack>
           <Avatar
