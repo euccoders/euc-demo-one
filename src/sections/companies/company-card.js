@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import ArrowDownOnSquareIcon from '@heroicons/react/24/solid/ArrowDownOnSquareIcon';
-import ClockIcon from '@heroicons/react/24/solid/ClockIcon';
+import HandThumbUpIcon from '@heroicons/react/24/solid/HandThumbUpIcon';
 import { Avatar, Box, Card, CardContent, Divider, Stack, SvgIcon, Typography, Button } from '@mui/material';
 
 export const CompanyCard = (props) => {
@@ -43,26 +43,26 @@ export const CompanyCard = (props) => {
         </Typography>
         <Typography>
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-      <div style={{ flexDirection: 'column', alignItems: 'center' }}>
-      <Typography>
-      <span style={{ color: 'transparent' }}>Invisible Text</span>
-        </Typography>
-        <Typography>
-          <Button variant="contained">
-            {company.monthlyAmount} / Month
-          </Button>
-        </Typography>
-      </div>
-      <div style={{ flexDirection: 'column', alignItems: 'center' }}>
-        <Typography align='center'>
-        <del>{company.originalAnnualAmount} / Year</del>
-        </Typography>
-        <Typography>
-          <Button variant="contained">
-            {company.discountedAnnualAmount} / Year
-          </Button>
-        </Typography>
-      </div>
+        <div style={{ flexDirection: 'column', alignItems: 'center', marginRight: '5px' }}>
+  <Typography>
+    <span style={{ color: 'transparent' }}>Invisible Text</span>
+  </Typography>
+  <Typography>
+    <Button variant="contained">
+      {company.monthlyAmount} / Month
+    </Button>
+  </Typography>
+</div>
+<div style={{ flexDirection: 'column', alignItems: 'center' }}>
+  <Typography align='center'>
+    <del>{company.originalAnnualAmount} / Year</del>
+  </Typography>
+  <Typography>
+    <Button variant="contained">
+      {company.discountedAnnualAmount} / Year
+    </Button>
+  </Typography>
+</div>
     </div>
         </Typography>
       </CardContent>
@@ -84,14 +84,14 @@ export const CompanyCard = (props) => {
             color="action"
             fontSize="small"
           >
-            <ClockIcon />
+            <HandThumbUpIcon />
           </SvgIcon>
           <Typography
             color="text.secondary"
             display="inline"
             variant="body2"
           >
-            Updated 2hr ago
+            {Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000}
           </Typography>
         </Stack>
         <Stack

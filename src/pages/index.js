@@ -20,7 +20,7 @@ const companiesEntertainment = [
     id: '2569ce0d517a7f06d3ea1f24',
     createdAt: '27/03/2019',
     description: 'Entertainment',
-    logo: '/assets/logos/Netflix.png',
+    logo: '/assets/logos/logo-netflix.png',
     title: 'Netflix',
     downloads: '594',
     monthlyAmount: '10 Credits',
@@ -31,7 +31,7 @@ const companiesEntertainment = [
     id: 'ed2b900870ceba72d203ec15',
     createdAt: '31/03/2019',
     description: 'Entertainment',
-    logo: '/assets/logos/Hulu.png',
+    logo: '/assets/logos/logo-hulu.png',
     title: 'Hulu',
     downloads: '625',
     monthlyAmount: '11 Credits',
@@ -42,7 +42,7 @@ const companiesEntertainment = [
     id: 'a033e38768c82fca90df3db7',
     createdAt: '03/04/2019',
     description: 'Entertainment',
-    logo: '/assets/logos/ParamountPlus.png',
+    logo: '/assets/logos/logo-paramountplus.png',
     title: 'Paramount+',
     downloads: '857',
     monthlyAmount: '12 Credits',
@@ -53,7 +53,7 @@ const companiesEntertainment = [
     id: 'a033e38768c82fca90df3db7',
     createdAt: '03/04/2019',
     description: 'Entertainment',
-    logo: '/assets/logos/ESPN.png',
+    logo: '/assets/logos/logo-espn.png',
     title: 'ESPN',
     downloads: '857',
     monthlyAmount: '10 Credits',
@@ -64,7 +64,7 @@ const companiesEntertainment = [
     id: 'a033e38768c82fca90df3db7',
     createdAt: '03/04/2019',
     description: 'Entertainment',
-    logo: '/assets/logos/DisneyPlus.png',
+    logo: '/assets/logos/logo-disneyplus.png',
     title: 'Disney+',
     downloads: '857',
     monthlyAmount: '9 Credits',
@@ -73,13 +73,12 @@ const companiesEntertainment = [
   }
 ];
 
-
 const companiesMusic = [
   {
     id: '1efecb2bf6a51def9869ab0f',
     createdAt: '04/04/2019',
     description: 'Music',
-    logo: '/assets/logos/Music/AppleMusic.png',
+    logo: '/assets/logos/Music/logo-applemusic.png',
     title: 'Apple Music',
     downloads: '406',
     originalAnnualAmount: '130 Credits',
@@ -90,7 +89,7 @@ const companiesMusic = [
     id: '1ed68149f65fbc6089b5fd07',
     createdAt: '04/04/2019',
     description: 'Music',
-    logo: '/assets/logos/Music/Spotify.png',
+    logo: '/assets/logos/Music/logo-spotify.png',
     title: 'Spotify',
     downloads: '835',
     originalAnnualAmount: '100 Credits',
@@ -101,7 +100,7 @@ const companiesMusic = [
     id: '5dab321376eff6177407e887',
     createdAt: '04/04/2019',
     description: 'Music',
-    logo: '/assets/logos/Music/YoutubeMusic.png',
+    logo: '/assets/logos/Music/logo-youtubemusic.png',
     title: 'Youtube Music',
     downloads: '835',
     originalAnnualAmount: '150 Credits',
@@ -112,7 +111,7 @@ const companiesMusic = [
     id: '5dab321376eff6177407e887',
     createdAt: '04/04/2019',
     description: 'Music',
-    logo: '/assets/logos/Music/GooglePlayMusic.png',
+    logo: '/assets/logos/Music/logo-googleplaymusic.png',
     title: 'Google Play Music',
     downloads: '835',
     originalAnnualAmount: '110 Credits',
@@ -123,7 +122,7 @@ const companiesMusic = [
     id: '5dab321376eff6177407e887',
     createdAt: '04/04/2019',
     description: 'Music',
-    logo: '/assets/logos/Music/Pandora.png',
+    logo: '/assets/logos/Music/logo-pandora.png',
     title: 'Pandora',
     downloads: '835',
     originalAnnualAmount: '80 Credits',
@@ -134,7 +133,7 @@ const companiesMusic = [
     id: '5dab321376eff6177407e887',
     createdAt: '04/04/2019',
     description: 'Music',
-    logo: '/assets/logos/Music/SoundCloud.png',
+    logo: '/assets/logos/Music/logo-soundcloud.png',
     title: 'Sound Cloud',
     downloads: '835',
     originalAnnualAmount: '90 Credits',
@@ -143,13 +142,12 @@ const companiesMusic = [
   }
 ];
 
-
 const companiesHealth = [
   {
     id: '1efecb2bf6a51def9869ab0f',
     createdAt: '04/04/2019',
     description: 'Health & Wellness',
-    logo: '/assets/logos/Health/LaFitness.png',
+    logo: '/assets/logos/Health/logo-lafitness.png',
     title: 'LaFitness',
     downloads: '406',
     originalAnnualAmount: '140 Credits',
@@ -160,7 +158,7 @@ const companiesHealth = [
     id: '1ed68149f65fbc6089b5fd07',
     createdAt: '04/04/2019',
     description: 'Health & Wellness',
-    logo: '/assets/logos/Health/YMCA.png',
+    logo: '/assets/logos/Health/logo-ymca.png',
     title: 'YMCA',
     downloads: '835',
     originalAnnualAmount: '100 Credits',
@@ -171,7 +169,7 @@ const companiesHealth = [
     id: '5dab321376eff6177407e887',
     createdAt: '04/04/2019',
     description: 'Health & Wellness',
-    logo: '/assets/logos/Health/HelloFresh.png',
+    logo: '/assets/logos/Health/logo-hellofresh.png',
     title: 'Hello Fresh',
     downloads: '835',
     originalAnnualAmount: '150 Credits',
@@ -182,7 +180,7 @@ const companiesHealth = [
     id: '1ed68149f65fbc6089b5fd07',
     createdAt: '04/04/2019',
     description: 'Health & Wellness',
-    logo: '/assets/logos/Health/DoorDash.png',
+    logo: '/assets/logos/Health/logo-doordash.png',
     title: 'Door Dash',
     downloads: '835',
     originalAnnualAmount: '130 Credits',
@@ -193,7 +191,7 @@ const companiesHealth = [
     id: '1ed68149f65fbc6089b5fd07',
     createdAt: '04/04/2019',
     description: 'Health & Wellness',
-    logo: '/assets/logos/Health/GNC.png',
+    logo: '/assets/logos/Health/logo-gnc.png',
     title: 'GNC',
     downloads: '835',
     originalAnnualAmount: '80 Credits',
@@ -204,7 +202,7 @@ const companiesHealth = [
     id: '1ed68149f65fbc6089b5fd07',
     createdAt: '04/04/2019',
     description: 'Health & Wellness',
-    logo: '/assets/logos/Health/Instacart.png',
+    logo: '/assets/logos/Health/logo-instacart.png',
     title: 'Instacart',
     downloads: '835',
     originalAnnualAmount: '90 Credits',
@@ -215,7 +213,7 @@ const companiesHealth = [
     id: '1ed68149f65fbc6089b5fd07',
     createdAt: '04/04/2019',
     description: 'Health & Wellness',
-    logo: '/assets/logos/Health/MyFitnessPal.png',
+    logo: '/assets/logos/Health/logo-myfitnesspal.png',
     title: 'MyFitnessPal',
     downloads: '835',
     originalAnnualAmount: '110 Credits',
@@ -226,7 +224,7 @@ const companiesHealth = [
     id: '1ed68149f65fbc6089b5fd07',
     createdAt: '04/04/2019',
     description: 'Health & Wellness',
-    logo: '/assets/logos/Health/Peloton.png',
+    logo: '/assets/logos/Health/logo-peloton.png',
     title: 'Peloton',
     downloads: '835',
     originalAnnualAmount: '120 Credits',
@@ -414,31 +412,31 @@ const Page = () => (
               products={[
                 {
                   id: '5ece2c077e39da27658aa8a9',
-                  image: '/assets/logos/Netflix.png',
+                  image: '/assets/logos/logo-netflix.png',
                   name: 'Netflix',
                   updatedAt: subHours(now, 6).getTime()
                 },
                 {
                   id: '5ece2c0d16f70bff2cf86cd8',
-                  image: '/assets/logos/Hulu.png',
+                  image: '/assets/logos/logo-hulu.png',
                   name: 'Hulu',
                   updatedAt: subDays(subHours(now, 8), 2).getTime()
                 },
                 {
                   id: 'b393ce1b09c1254c3a92c827',
-                  image: '/assets/logos/ParamountPlus.png',
+                  image: '/assets/logos/logo-paramountplus.png',
                   name: 'Paramount+',
                   updatedAt: subDays(subHours(now, 1), 1).getTime()
                 },
                 {
                   id: 'a6ede15670da63f49f752c89',
-                  image: '/assets/logos/DisneyPlus.png',
+                  image: '/assets/logos/logo-disneyplus.png',
                   name: 'Disney+',
                   updatedAt: subDays(subHours(now, 3), 3).getTime()
                 },
                 {
                   id: 'bcad5524fe3a2f8f8620ceda',
-                  image: '/assets/logos/ESPN.png',
+                  image: '/assets/logos/logo-espn.png',
                   name: 'ESPN',
                   updatedAt: subDays(subHours(now, 5), 6).getTime()
                 }
